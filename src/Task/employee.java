@@ -29,14 +29,12 @@ public class employee {
     }
 
     public double raiseSalary() {
-        double netSalary = salary - tax() + bonus();
-        double raise = 0;
         if ((2021 - hireYear) < 10) {
-            raise = (netSalary) * 5 / 100;
+            return salary * 5 / 100;
         } else if ((2021 - hireYear) < 20) {
-            raise = netSalary * 10 / 100;
-        } else raise = netSalary * 15 / 100;
-        return raise;
+            return salary * 10 / 100;
+        } else
+        return salary * 15/100;
     }
 
     @Override
